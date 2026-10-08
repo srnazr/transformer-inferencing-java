@@ -2,6 +2,7 @@ package com.assignment.model_utils.model_runner_factory;
 
 import com.assignment.model_utils.model_runner.ClipModelRunner;
 import com.assignment.model_utils.model_runner.ModelRunner;
+import com.assignment.model_utils.model_runner.VLMModelRunner;
 import com.assignment.model_utils.model_runner.ViTModelRunner;
 
 public class ModelRunnerFactory {
@@ -10,6 +11,8 @@ public class ModelRunnerFactory {
             return (new ViTModelRunner());
         else if ("clip".equals(type))
             return (new ClipModelRunner());
+        else if ("vlm".equals(type))
+            return (new VLMModelRunner());
         else
             return (null);
     }
